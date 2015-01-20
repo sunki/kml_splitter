@@ -1,3 +1,5 @@
 .idea
 split/
 *.kml
+.ruby-gemset
+.ruby-version
