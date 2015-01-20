@@ -40,9 +40,12 @@ coords.content.strip.split(' ').compact.each_with_index do |coord,i|
   last_coord = coord
 end
 
+title_str = title.content
+name_str  = name.content
+
 split_coords.each do |i,coord|
-  title.content = "#{title.content} #{i}"
-  name.content  = "#{name.content} #{i}"
+  title.content = "#{title_str} #{i}"
+  name.content  = "#{name_str} #{i}"
   coords.content = coord.join(' ')
   write_split_file "#{fname_parts[0]}-#{i}.#{fname_parts[1]}", xml
 end
