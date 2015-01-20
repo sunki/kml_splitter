@@ -3,3 +3,4 @@ split/
 *.kml
 .ruby-gemset
 .ruby-version
+.DS_Store
