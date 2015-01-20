@@ -9,9 +9,9 @@ fname_parts = fname.split('.')
 points_per_file = ARGV[1] || 50
 @dir = 'split'
 
-raise "File #{fname} not found" if !File.exists?(fname)
+raise "File #{fname} not found" unless File.exists?(fname)
 
-FileUtils.mkpath(@dir) if !File.directory?(@dir)
+FileUtils.mkpath(@dir) unless File.directory?(@dir)
 
 def write_split_file filename, xml
   file = File.open(File.join(@dir, filename), 'w')
